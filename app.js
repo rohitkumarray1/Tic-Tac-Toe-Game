@@ -35,9 +35,10 @@ boxes.forEach((box) => {
     count++;
 
     let isWinner = checkWinner();
-
-    if (isWinner != true && count > 8) {
-      drawGame();
+    if(count >= 9) {
+      if(!isWinner) {
+         drawGame();
+      }
     }
   });
 });
