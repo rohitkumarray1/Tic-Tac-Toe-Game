@@ -34,7 +34,7 @@ boxes.forEach((box) => {
     box.disabled = true;
     count++;
     let isWinner = checkWinner();
-    if (!isWinner && count === 9) {
+    if (count === 9 && !isWinner) {
       drawGame();
     }
     
