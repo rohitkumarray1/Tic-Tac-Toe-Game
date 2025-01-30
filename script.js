@@ -20,11 +20,11 @@ const winPattern = [
 
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
-        if(turnO) {
+        if (turnO) {
             box.innerText = "O";
             turnO = false;
-            box.classList.remove("turnX")
-        }else {
+            box.classList.remove("turnX");
+        } else {
             box.innerText = "X";
             box.classList.add("turnX");
             turnO = true;
@@ -34,13 +34,12 @@ boxes.forEach((box) => {
 
         let isWinner = checkWinner();
 
-        if(count >= 9 && isWinner == false) {
+        if (count >= 9 && isWinner === false) {
             drawGame();
         }
-        console.log(count);
-        console.log(isWinner);
     });
 });
+
 
 const showWinner = (winner) => {
     msg.innerText = `Congratulation, The winner is ${winner}`;
